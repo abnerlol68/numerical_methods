@@ -11,9 +11,9 @@ def det(m):
 
 
 def sys22(m, a):
-    mx = "{},{} {},{}".format(a[0],m[0][1],a[1],m[1][1])
-    my = "{},{} {},{}".format(m[0][0],a[0],m[1][0],a[1])
-    m = "{},{} {},{}".format(m[0][0],m[0][1],m[1][0],m[1][1])
+    mx = "{},{} {},{}".format(a[0], m[0][1], a[1], m[1][1])
+    my = "{},{} {},{}".format(m[0][0], a[0], m[1][0], a[1])
+    m = "{},{} {},{}".format(m[0][0], m[0][1], m[1][0], m[1][1])
     detM = det(m)
 
     return [det(mx) / detM, det(my) / detM]
@@ -52,8 +52,6 @@ def main():
     m = [ e.split(",") for e in l ]
     a = [*ll].pop(len(ll) - 1).split(",")
 
-    # print(m)
-    # print(a)
     if len(m) == 3 :
         print(sys33(m, a))
     elif len(m) == 2 :
